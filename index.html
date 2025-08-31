@@ -2,116 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home - Giedre Yager Art Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid #eee;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    header a.logo-link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-      flex-grow: 1;
-    }
-    header a.logo-link img {
-      height: 50px;
-      width: auto;
-    }
-    header h1 {
-      font-weight: 700;
-      font-size: 1.5rem;
-      margin: 0 1rem;
-      white-space: nowrap;
-    }
-    nav {
-      flex-shrink: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: #222;
-      margin-left: 1.5rem;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #555;
-    }
-    main {
-      max-width: 700px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
-      width: 90vw;
-    }
-    main h2 {
-      font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    main p {
-      font-size: 1.1rem;
-      color: #444;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #eee;
-      max-width: 900px;
-      margin: 3rem auto 2rem;
-    }
-    @media (max-width: 600px) {
-      header, footer, main {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      nav a {
-        margin-left: 1rem;
-      }
-      header a.logo-link h1 {
-        font-size: 1.2rem;
-        margin: 0 0.5rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Giedre Yager's art portfolio - explore paintings inspired by nature, spirituality, and emotions." />
+
+  <title>Home | Giedre Yager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- HEADER -->
+  <header id="site-header">
     <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Giedre Yager Logo" />
       <h1>Giedre Yager</h1>
     </a>
-    <nav>
-      <a href="index.html">Home</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" />
+    <label for="menu-toggle" class="hamburger" tabindex="0"></label>
+    <nav class="center-nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="active-link">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
+  <section class="hero-banner" style="background-image: url('images/banner.jpg');">
+    <div class="hero-overlay">
+      <h2>Welcome to Giedre Yager’s Art</h2>
+      <p>Explore a journey of colors, textures, and emotions.</p>
+      <div class="hero-ctas">
+        <a href="gallery.html" class="cta-btn">Explore Gallery</a>
+        <a href="contact.html" class="cta-btn secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO TEXT -->
   <main>
-    <h2>Welcome to Giedre Yager Art Portfolio</h2>
-    <p>Explore my collection of paintings, digital art, and creative projects. Each piece tells a story, and I’m excited to share them with you.</p>
+    <section class="intro">
+      <h2>Discover My Work</h2>
+      <p>Each piece reflects a unique perspective inspired by nature, spirituality, and everyday life.</p>
+    </section>
+
+    <!-- GALLERY PREVIEW GRID -->
+    <section class="preview-grid" aria-label="Gallery preview">
+      <a href="#" class="hover-swap" aria-label="Beige Series artworks 80x100cm" 
+         data-images='[{"src":"images/Beige 80x100 (1).jpg","caption":"Beige No.1 — 80x100cm"},{"src":"images/Beige 80x100 (2).jpg","caption":"Beige No.2 — 80x100cm"}]'>
+        <img src="images/Beige 80x100 (1).jpg" alt="Beige Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Beige 80x100 (2).jpg" alt="Beige Series artwork alternative view, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Beige Series — 80x100cm</span>
+      </a>
+
+            <!-- Beige Series -->
+      <a href="#" class="hover-swap"
+         aria-label="Beige Series artworks 80x100cm"
+         data-images='[
+           {"src":"images/Beige 80x100 (1).jpg","caption":"Beige No.1 — 80x100cm"},
+           {"src":"images/Beige 80x100 (2).jpg","caption":"Beige No.2 — 80x100cm"},
+           {"src":"images/Beige 80x100 (3).jpg","caption":"Beige No.3 — 80x100cm"},
+           {"src":"images/Beige 80x100 (4).jpg","caption":"Beige No.4 — 80x100cm"}
+         ]'>
+        <img src="images/Beige 80x100 (1).jpg" alt="Beige Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Beige 80x100 (2).jpg" alt="Beige Series artwork alternative view, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Beige Series — 80x100cm</span>
+      </a>
+
+      <!-- Big Beauty Series -->
+      <a href="#" class="hover-swap"
+         aria-label="Big Beauty Series artworks 80x160cm"
+         data-images='[
+           {"src":"images/Big beauty sold 80x160 (1).jpg","caption":"Big Beauty No.1 — 80x160cm"},
+           {"src":"images/Big beauty sold 80x160 (2).jpg","caption":"Big Beauty No.2 — 80x160cm"},
+           {"src":"images/Big beauty sold 80x160 (3).jpg","caption":"Big Beauty No.3 — 80x160cm"},
+           {"src":"images/Big beauty sold 80x160 (4).jpg","caption":"Big Beauty No.4 — 80x160cm"}
+         ]'>
+        <img src="images/Big beauty sold 80x160 (1).jpg" alt="Big Beauty Series artwork, 80x160cm" class="default" loading="lazy" />
+        <img src="images/Big beauty sold 80x160 (2).jpg" alt="Big Beauty Series artwork alternative view, 80x160cm" class="hover" loading="lazy" />
+        <span class="hover-title">Big Beauty — 80x160cm</span>
+      </a>
+
+      <!-- Blue Series -->
+      <a href="#" class="hover-swap"
+         aria-label="Blue Series artworks 60x80cm"
+         data-images='[
+           {"src":"images/Blue 60x80 (1).jpg","caption":"Blue No.1 — 60x80cm"},
+           {"src":"images/Blue 60x80 (2).jpg","caption":"Blue No.2 — 60x80cm"},
+           {"src":"images/Blue 60x80 (3).jpg","caption":"Blue No.3 — 60x80cm"},
+           {"src":"images/Blue 60x80 (4).jpg","caption":"Blue No.4 — 60x80cm"}
+         ]'>
+        <img src="images/Blue 60x80 (1).jpg" alt="Blue Series artwork, 60x80cm" class="default" loading="lazy" />
+        <img src="images/Blue 60x80 (2).jpg" alt="Blue Series artwork alternative view, 60x80cm" class="hover" loading="lazy" />
+        <span class="hover-title">Blue Series — 60x80cm</span>
+      </a>
+
+      <!-- Calm Series -->
+      <a href="#" class="hover-swap"
+         aria-label="Calm Series artworks 80x100cm"
+         data-images='[
+           {"src":"images/Calm sold 80x100 (1).jpg","caption":"Calm No.1 — 80x100cm"},
+           {"src":"images/Calm sold 80x100 (2).jpg","caption":"Calm No.2 — 80x100cm"},
+           {"src":"images/Calm sold 80x100 (3).jpg","caption":"Calm No.3 — 80x100cm"},
+           {"src":"images/Calm sold 80x100 (4).jpg","caption":"Calm No.4 — 80x100cm"}
+         ]'>
+        <img src="images/Calm sold 80x100 (1).jpg" alt="Calm Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Calm sold 80x100 (2).jpg" alt="Calm Series artwork alternative view, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Calm Series — 80x100cm</span>
+      </a>
+
+
+      <!-- Add more artworks in the same structure -->
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-content">
+        <button id="close-lightbox" aria-label="Close">×</button>
+        <button id="prev" aria-label="Previous image">‹</button>
+        <div class="lightbox-main">
+          <img src="" alt="Expanded artwork view" id="lightbox-img">
+        </div>
+        <button id="next" aria-label="Next image">›</button>
+        <p id="lightbox-caption" class="art-caption"></p>
+        <div id="lightbox-thumbs" class="lightbox-thumbs"></div>
+        <a href="contact.html" class="cta-btn enquire-btn">Purchase / Enquire</a>
+      </div>
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Giedre Yager. All rights reserved.
+    <p>&copy; 2025 Giedre Yager. All rights reserved.</p>
+    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Instagram">
+      <img src="images/instagram-color.png" alt="Instagram logo" class="instagram-logo" />
+    </a>
+    <a href="mailto:yourname@example.com" class="email-link" aria-label="Send email">Email Me</a>
   </footer>
+
+  <script>
+    let lastScroll = 0;
+    const header = document.getElementById("site-header");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        // scrolling down & not at very top
+        header.classList.add("hide");
+      } else {
+        // scrolling up
+        header.classList.remove("hide");
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
+
+
 </body>
 </html>
