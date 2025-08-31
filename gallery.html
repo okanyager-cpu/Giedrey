@@ -2,95 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery – Giedre Yager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the full art gallery of Giedre Yager, featuring series inspired by nature, spirituality, and emotions." />
+
+  <title>Gallery | Giedre Yager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- HEADER -->
+  <header id="site-header">
     <a href="index.html" class="logo-link">
-      <img src="images/logo.png" alt="" />
+      <img src="images/logo.png" alt="Giedre Yager Logo" />
       <h1>Giedre Yager</h1>
     </a>
-    <nav>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" />
+    <label for="menu-toggle" class="hamburger" tabindex="0"></label>
+    <nav class="center-nav" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="gallery.html" class="active-link">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="gallery-banner">
-    <div class="banner-container">
-      <div class="banner-overlay">
-        <h2>Gallery</h2>
-        <p>
-          Here you’ll find a curated collection of my artwork, exploring vibrant forms, bold textures, and emotional storytelling through color and composition.
-          Scroll down and take your time – each piece has a story.
-        </p>
-      </div>
+  <!-- HERO SECTION -->
+  <section class="hero-banner" style="background-image: url('images/banner2.png');">
+    <div class="hero-overlay">
+      <h2>Gallery</h2>
+      <p>Browse all of my series and original artworks.</p>
+      <a href="contact.html" class="cta-btn">Purchase / Enquire</a>
     </div>
   </section>
 
-  <section class="gallery-container">
-    <div class="artwork">
-      <div class="image-swap has-hover">
-        <img src="images/art1.jpg" alt="" class="default" />
-        <img src="images/art1_hover.jpg" alt="" class="hover" />
+  <!-- FULL GALLERY -->
+  <main>
+    <section class="preview-grid" aria-label="Full Art Gallery">
+      <a href="#" class="hover-swap" aria-label="Big Beauty Series 80x160cm"
+         data-images='[{"src":"images/Big beauty sold 80x160 (1).jpg","caption":"Big Beauty No.1 — 80x160cm"}]'>
+        <img src="images/Big beauty sold 80x160 (1).jpg" alt="Big Beauty Series artwork, 80x160cm" class="default" loading="lazy" />
+        <img src="images/Big beauty sold 80x160 (2).jpg" alt="Big Beauty Series artwork alternative view, 80x160cm" class="hover" loading="lazy" />
+        <span class="hover-title">Big Beauty — 80x160cm</span>
+      </a>
+
+      <!-- Artwork 1 -->
+      <a href="#" class="hover-swap" aria-label="Beige Series 80x100cm"
+        data-images='[{"src":"images/Beige 80x100 (1).jpg","caption":"Beige No.1 — 80x100cm"},{"src":"images/Beige 80x100 (2).jpg","caption":"Beige No.2 — 80x100cm"}]'>
+        <img src="images/Beige 80x100 (1).jpg" alt="Beige Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Beige 80x100 (2).jpg" alt="Beige Series artwork alternative, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Beige Series — 80x100cm</span>
+      </a>
+
+      <!-- Artwork 2 -->
+      <a href="#" class="hover-swap" aria-label="Big Beauty Series 80x160cm"
+        data-images='[{"src":"images/Big beauty sold 80x160 (1).jpg","caption":"Big Beauty No.1 — 80x160cm"},{"src":"images/Big beauty sold 80x160 (2).jpg","caption":"Big Beauty No.2 — 80x160cm"}]'>
+        <img src="images/Big beauty sold 80x160 (1).jpg" alt="Big Beauty artwork, 80x160cm" class="default" loading="lazy" />
+        <img src="images/Big beauty sold 80x160 (2).jpg" alt="Big Beauty alternative view, 80x160cm" class="hover" loading="lazy" />
+        <span class="hover-title">Big Beauty — 80x160cm</span>
+      </a>
+
+      <!-- Artwork 3 -->
+      <a href="#" class="hover-swap" aria-label="Circle Series 100x100cm"
+        data-images='[{"src":"images/Circle 100x100 (1).jpg","caption":"Circle No.1 — 100x100cm"},{"src":"images/Circle 100x100 (2).jpg","caption":"Circle No.2 — 100x100cm"}]'>
+        <img src="images/Circle 100x100 (1).jpg" alt="Circle Series artwork, 100x100cm" class="default" loading="lazy" />
+        <img src="images/Circle 100x100 (2).jpg" alt="Circle Series alternative view, 100x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Circle — 100x100cm</span>
+      </a>
+
+      <!-- Artwork 4 -->
+      <a href="#" class="hover-swap" aria-label="Grey Abstract 120x90cm"
+        data-images='[{"src":"images/Grey abstract 120x90 (1).jpg","caption":"Grey Abstract No.1 — 120x90cm"},{"src":"images/Grey abstract 120x90 (2).jpg","caption":"Grey Abstract No.2 — 120x90cm"}]'>
+        <img src="images/Grey abstract 120x90 (1).jpg" alt="Grey Abstract painting, 120x90cm" class="default" loading="lazy" />
+        <img src="images/Grey abstract 120x90 (2).jpg" alt="Grey Abstract alternative view, 120x90cm" class="hover" loading="lazy" />
+        <span class="hover-title">Grey Abstract — 120x90cm</span>
+      </a>
+
+      <!-- Artwork 5 -->
+      <a href="#" class="hover-swap" aria-label="Golden Hour Series 80x120cm"
+        data-images='[{"src":"images/Golden hour 80x120 (1).jpg","caption":"Golden Hour No.1 — 80x120cm"},{"src":"images/Golden hour 80x120 (2).jpg","caption":"Golden Hour No.2 — 80x120cm"}]'>
+        <img src="images/Golden hour 80x120 (1).jpg" alt="Golden Hour Series artwork, 80x120cm" class="default" loading="lazy" />
+        <img src="images/Golden hour 80x120 (2).jpg" alt="Golden Hour alternative view, 80x120cm" class="hover" loading="lazy" />
+        <span class="hover-title">Golden Hour — 80x120cm</span>
+      </a>
+
+      <!-- Artwork 6 -->
+      <a href="#" class="hover-swap" aria-label="Nature’s Flow 90x90cm"
+        data-images='[{"src":"images/Nature flow 90x90 (1).jpg","caption":"Nature’s Flow No.1 — 90x90cm"},{"src":"images/Nature flow 90x90 (2).jpg","caption":"Nature’s Flow No.2 — 90x90cm"}]'>
+        <img src="images/Nature flow 90x90 (1).jpg" alt="Nature’s Flow painting, 90x90cm" class="default" loading="lazy" />
+        <img src="images/Nature flow 90x90 (2).jpg" alt="Nature’s Flow alternative view, 90x90cm" class="hover" loading="lazy" />
+        <span class="hover-title">Nature’s Flow — 90x90cm</span>
+      </a>
+
+      <!-- Artwork 7 -->
+      <a href="#" class="hover-swap" aria-label="Ocean Calm 100x150cm"
+        data-images='[{"src":"images/Ocean calm 100x150 (1).jpg","caption":"Ocean Calm No.1 — 100x150cm"},{"src":"images/Ocean calm 100x150 (2).jpg","caption":"Ocean Calm No.2 — 100x150cm"}]'>
+        <img src="images/Ocean calm 100x150 (1).jpg" alt="Ocean Calm painting, 100x150cm" class="default" loading="lazy" />
+        <img src="images/Ocean calm 100x150 (2).jpg" alt="Ocean Calm alternative view, 100x150cm" class="hover" loading="lazy" />
+        <span class="hover-title">Ocean Calm — 100x150cm</span>
+      </a>
+
+      <!-- Artwork 8 -->
+      <a href="#" class="hover-swap" aria-label="Sunset Glow 100x80cm"
+        data-images='[{"src":"images/Sunset glow 100x80 (1).jpg","caption":"Sunset Glow No.1 — 100x80cm"},{"src":"images/Sunset glow 100x80 (2).jpg","caption":"Sunset Glow No.2 — 100x80cm"}]'>
+        <img src="images/Sunset glow 100x80 (1).jpg" alt="Sunset Glow artwork, 100x80cm" class="default" loading="lazy" />
+        <img src="images/Sunset glow 100x80 (2).jpg" alt="Sunset Glow alternative view, 100x80cm" class="hover" loading="lazy" />
+        <span class="hover-title">Sunset Glow — 100x80cm</span>
+      </a>
+
+      <!-- Artwork 9 -->
+      <a href="#" class="hover-swap" aria-label="Mystic Energy 120x120cm"
+        data-images='[{"src":"images/Mystic energy 120x120 (1).jpg","caption":"Mystic Energy No.1 — 120x120cm"},{"src":"images/Mystic energy 120x120 (2).jpg","caption":"Mystic Energy No.2 — 120x120cm"}]'>
+        <img src="images/Mystic energy 120x120 (1).jpg" alt="Mystic Energy painting, 120x120cm" class="default" loading="lazy" />
+        <img src="images/Mystic energy 120x120 (2).jpg" alt="Mystic Energy alternative view, 120x120cm" class="hover" loading="lazy" />
+        <span class="hover-title">Mystic Energy — 120x120cm</span>
+      </a>
+
+      <!-- Artwork 10 -->
+      <a href="#" class="hover-swap" aria-label="Winter Silence 90x110cm"
+        data-images='[{"src":"images/Winter silence 90x110 (1).jpg","caption":"Winter Silence No.1 — 90x110cm"},{"src":"images/Winter silence 90x110 (2).jpg","caption":"Winter Silence No.2 — 90x110cm"}]'>
+        <img src="images/Winter silence 90x110 (1).jpg" alt="Winter Silence painting, 90x110cm" class="default" loading="lazy" />
+        <img src="images/Winter silence 90x110 (2).jpg" alt="Winter Silence alternative view, 90x110cm" class="hover" loading="lazy" />
+        <span class="hover-title">Winter Silence — 90x110cm</span>
+      </a>
+
+
+      <!-- Add more artworks in same structure -->
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-content">
+        <button id="close-lightbox" aria-label="Close">×</button>
+        <button id="prev" aria-label="Previous image">‹</button>
+        <div class="lightbox-main">
+          <img src="" alt="Expanded artwork view" id="lightbox-img">
+        </div>
+        <button id="next" aria-label="Next image">›</button>
+        <p id="lightbox-caption" class="art-caption"></p>
+        <div id="lightbox-thumbs" class="lightbox-thumbs"></div>
+        <a href="contact.html" class="cta-btn enquire-btn">Purchase / Enquire</a>
       </div>
-      <h3>“Sunset Embrace”</h3>
     </div>
+  </main>
 
-    <div class="artwork">
-      <div class="image-swap">
-        <img src="images/art2.jpg" alt="" class="default" />
-        <!-- No hover image -->
-      </div>
-      <h3>“Urban Rhythm”</h3>
-    </div>
-
-    <div class="artwork">
-      <div class="image-swap has-hover">
-        <img src="images/art3.jpg" alt="" class="default" />
-        <img src="images/art3_hover.jpg" alt="" class="hover" />
-      </div>
-      <h3>“Flow of Thought”</h3>
-    </div>
-
-    <div class="artwork">
-      <div class="image-swap has-hover">
-        <img src="images/art4.jpg" alt="" class="default" />
-        <img src="images/art4_2.jpg" alt="" class="hover" />
-      </div>
-      <h3>“Contrast in Calm”</h3>
-    </div>
-  </section>
-
-  <!-- Add this inside your footer or just above it -->
-
-<footer>
-  <p>&copy; 2025 Giedre Yager. All rights reserved.</p>
-  
-  <div class="instagram-link">
-    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram profile">
-      <!-- Colored Instagram SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551.034 551.034" width="24" height="24" aria-hidden="true" focusable="false">
-        <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f09433"/>
-          <stop offset="25%" stop-color="#e6683c"/>
-          <stop offset="50%" stop-color="#dc2743"/>
-          <stop offset="75%" stop-color="#cc2366"/>
-          <stop offset="100%" stop-color="#bc1888"/>
-        </linearGradient>
-        <path fill="url(#igGradient)" d="M386.878 0H164.156C73.47 0 0 73.47 0 164.156v222.724c0 90.686 73.47 164.156 164.156 164.156h222.722c90.687 0 164.157-73.47 164.157-164.156V164.156C551.034 73.47 477.564 0 386.878 0z"/>
-        <path fill="#fff" d="M275.518 134.718c-77.101 0-139.7 62.6-139.7 139.7s62.599 139.7 139.7 139.7 139.7-62.6 139.7-139.7-62.6-139.7-139.7-139.7zm0 230.034c-50.047 0-90.334-40.288-90.334-90.334s40.287-90.334 90.334-90.334 90.334 40.288 90.334 90.334-40.287 90.334-90.334 90.334z"/>
-        <circle fill="#fff" cx="418.31" cy="134.5" r="34.15"/>
-      </svg>
-      Follow me on Instagram
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Giedre Yager. All rights reserved.</p>
+    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Instagram">
+      <img src="images/instagram-color.png" alt="Instagram logo" class="instagram-logo" />
     </a>
-  </div>
-</footer>
+    <a href="mailto:yourname@example.com" class="email-link" aria-label="Send email">Email Me</a>
+  </footer>
+  
+  <script>
+    let lastScroll = 0;
+    const header = document.getElementById("site-header");
 
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
 
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        // scrolling down & not at very top
+        header.classList.add("hide");
+      } else {
+        // scrolling up
+        header.classList.remove("hide");
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
 
 
 </body>
