@@ -4,16 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Explore the full art gallery of Giedre Yager, featuring series inspired by nature, spirituality, and emotions." />
-
   <title>Gallery | Giedre Yager</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HEADER -->
   <header id="site-header">
-    <a href="index.html" class="logo-link">
+    <a href="index.html" class="logo-link" aria-label="Go to homepage">
       <img src="images/logo.png" alt="Giedre Yager Logo" />
       <h1>Giedre Yager</h1>
     </a>
@@ -27,7 +30,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero-banner" style="background-image: url('images/Banner2.png');">
+  <section class="hero-banner" style="background:linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0)), url('images/banner2.png') no-repeat center center/cover;">
     <div class="hero-overlay">
       <h2>Gallery</h2>
       <p>Browse all of my series and original artworks.</p>
@@ -37,143 +40,376 @@
 
   <!-- FULL GALLERY -->
   <main>
-    <section class="preview-grid" aria-label="Full Art Gallery">
-      <a href="#" class="hover-swap" aria-label="Big Beauty Series 80x160cm"
-         data-images='[{"src":"images/Big beauty sold 80x160 (1).jpg","caption":"Big Beauty No.1 — 80x160cm"}]'>
-        <img src="images/Big beauty sold 80x160 (1).jpg" alt="Big Beauty Series artwork, 80x160cm" class="default" loading="lazy" />
-        <img src="images/Big beauty sold 80x160 (2).jpg" alt="Big Beauty Series artwork alternative view, 80x160cm" class="hover" loading="lazy" />
-        <span class="hover-title">Big Beauty — 80x160cm</span>
-      </a>
+     <section class="preview-grid" aria-label="Full gallery preview">
 
-      <!-- Artwork 1 -->
-      <a href="#" class="hover-swap" aria-label="Beige Series 80x100cm"
-        data-images='[{"src":"images/Beige 80x100 (1).jpg","caption":"Beige No.1 — 80x100cm"},{"src":"images/Beige 80x100 (2).jpg","caption":"Beige No.2 — 80x100cm"}]'>
+      <!-- Beige Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Beige Series artworks 80x100cm"
+        data-images='[
+          {"src":"images/Beige 80x100 (1).jpg","caption":"Beige No.1 — 80x100cm","description":"Inspired by autumn tones, painted with acrylic on canvas."},
+          {"src":"images/Beige 80x100 (2).jpg","caption":"Beige No.2 — 80x100cm","description":"Soft textures and subtle shadows."},
+          {"src":"images/Beige 80x100 (3).jpg","caption":"Beige No.3 — 80x100cm","description":"Exploring the harmony of neutral tones."},
+          {"src":"images/Beige 80x100 (4).jpg","caption":"Beige No.4 — 80x100cm","description":"A calm and minimalistic composition."}
+        ]'>
         <img src="images/Beige 80x100 (1).jpg" alt="Beige Series artwork, 80x100cm" class="default" loading="lazy" />
-        <img src="images/Beige 80x100 (2).jpg" alt="Beige Series artwork alternative, 80x100cm" class="hover" loading="lazy" />
+        <img src="images/Beige 80x100 (2).jpg" alt="Beige Series alternative artwork, 80x100cm" class="hover" loading="lazy" />
         <span class="hover-title">Beige Series — 80x100cm</span>
       </a>
 
-      <!-- Artwork 2 -->
-      <a href="#" class="hover-swap" aria-label="Big Beauty Series 80x160cm"
-        data-images='[{"src":"images/Big beauty sold 80x160 (1).jpg","caption":"Big Beauty No.1 — 80x160cm"},{"src":"images/Big beauty sold 80x160 (2).jpg","caption":"Big Beauty No.2 — 80x160cm"}]'>
-        <img src="images/Big beauty sold 80x160 (1).jpg" alt="Big Beauty artwork, 80x160cm" class="default" loading="lazy" />
-        <img src="images/Big beauty sold 80x160 (2).jpg" alt="Big Beauty alternative view, 80x160cm" class="hover" loading="lazy" />
+      <!-- Big Beauty Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Big Beauty Series artworks 80x160cm"
+        data-images='[
+          {"src":"images/Big beauty sold 80x160 (1).jpg","caption":"Big Beauty No.1 — 80x160cm","description":"A bold expression of color and form."},
+          {"src":"images/Big beauty sold 80x160 (2).jpg","caption":"Big Beauty No.2 — 80x160cm","description":"Dynamic layering with gold accents."},
+          {"src":"images/Big beauty sold 80x160 (3).jpg","caption":"Big Beauty No.3 — 80x160cm","description":"Capturing movement through abstract strokes."},
+          {"src":"images/Big beauty sold 80x160 (4).jpg","caption":"Big Beauty No.4 — 80x160cm","description":"Emphasizing vertical balance and light."}
+        ]'>
+        <img src="images/Big beauty sold 80x160 (1).jpg" alt="Big Beauty Series artwork, 80x160cm" class="default" loading="lazy" />
+        <img src="images/Big beauty sold 80x160 (2).jpg" alt="Big Beauty Series alternative artwork, 80x160cm" class="hover" loading="lazy" />
         <span class="hover-title">Big Beauty — 80x160cm</span>
       </a>
 
-      <!-- Artwork 3 -->
-      <a href="#" class="hover-swap" aria-label="Circle Series 100x100cm"
-        data-images='[{"src":"images/Circle 100x100 (1).jpg","caption":"Circle No.1 — 100x100cm"},{"src":"images/Circle 100x100 (2).jpg","caption":"Circle No.2 — 100x100cm"}]'>
-        <img src="images/Circle 100x100 (1).jpg" alt="Circle Series artwork, 100x100cm" class="default" loading="lazy" />
-        <img src="images/Circle 100x100 (2).jpg" alt="Circle Series alternative view, 100x100cm" class="hover" loading="lazy" />
-        <span class="hover-title">Circle — 100x100cm</span>
+      <!-- Blue Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Blue Series artworks 60x80cm"
+        data-images='[
+          {"src":"images/Blue 60x80 (1).jpg","caption":"Blue No.1 — 60x80cm","description":"Deep blues inspired by the ocean."},
+          {"src":"images/Blue 60x80 (2).jpg","caption":"Blue No.2 — 60x80cm","description":"Layered textures evoking calm waters."},
+          {"src":"images/Blue 60x80 (3).jpg","caption":"Blue No.3 — 60x80cm","description":"Light reflections in abstract form."},
+          {"src":"images/Blue 60x80 (4).jpg","caption":"Blue No.4 — 60x80cm","description":"Soft gradient transitions with minimalism."}
+        ]'>
+        <img src="images/Blue 60x80 (1).jpg" alt="Blue Series artwork, 60x80cm" class="default" loading="lazy" />
+        <img src="images/Blue 60x80 (2).jpg" alt="Blue Series alternative artwork, 60x80cm" class="hover" loading="lazy" />
+        <span class="hover-title">Blue Series — 60x80cm</span>
       </a>
 
-      <!-- Artwork 4 -->
-      <a href="#" class="hover-swap" aria-label="Grey Abstract 120x90cm"
-        data-images='[{"src":"images/Grey abstract 120x90 (1).jpg","caption":"Grey Abstract No.1 — 120x90cm"},{"src":"images/Grey abstract 120x90 (2).jpg","caption":"Grey Abstract No.2 — 120x90cm"}]'>
-        <img src="images/Grey abstract 120x90 (1).jpg" alt="Grey Abstract painting, 120x90cm" class="default" loading="lazy" />
-        <img src="images/Grey abstract 120x90 (2).jpg" alt="Grey Abstract alternative view, 120x90cm" class="hover" loading="lazy" />
-        <span class="hover-title">Grey Abstract — 120x90cm</span>
+      <!-- Blue Splash Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Blue Splash Series artworks 90x120cm"
+        data-images='[
+          {"src":"images/Blue Splash 90x120 (1).jpg","caption":"Blue Splash No.1 — 90x120cm","description":"Energetic splash of deep and light blues."},
+          {"src":"images/Blue Splash 90x120 (2).jpg","caption":"Blue Splash No.2 — 90x120cm","description":"Movement and texture inspired by sea spray."},
+          {"src":"images/Blue Splash 90x120 (3).jpg","caption":"Blue Splash No.3 — 90x120cm","description":"Bold strokes and luminous highlights."}
+        ]'>
+        <img src="images/Blue Splash 90x120 (1).jpg" alt="Blue Splash No.1, 90x120cm" class="default" loading="lazy" />
+        <img src="images/Blue Splash 90x120 (2).jpg" alt="Blue Splash No.2, 90x120cm" class="hover" loading="lazy" />
+        <span class="hover-title">Blue Splash — 90x120cm</span>
       </a>
 
-      <!-- Artwork 5 -->
-      <a href="#" class="hover-swap" aria-label="Golden Hour Series 80x120cm"
-        data-images='[{"src":"images/Golden hour 80x120 (1).jpg","caption":"Golden Hour No.1 — 80x120cm"},{"src":"images/Golden hour 80x120 (2).jpg","caption":"Golden Hour No.2 — 80x120cm"}]'>
-        <img src="images/Golden hour 80x120 (1).jpg" alt="Golden Hour Series artwork, 80x120cm" class="default" loading="lazy" />
-        <img src="images/Golden hour 80x120 (2).jpg" alt="Golden Hour alternative view, 80x120cm" class="hover" loading="lazy" />
-        <span class="hover-title">Golden Hour — 80x120cm</span>
+      <!-- Calm Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Calm Series artworks 80x100cm"
+        data-images='[
+          {"src":"images/Calm sold 80x100 (1).jpg","caption":"Calm No.1 — 80x100cm","description":"Soft earth tones creating a serene ambiance."},
+          {"src":"images/Calm sold 80x100 (2).jpg","caption":"Calm No.2 — 80x100cm","description":"Gentle strokes representing inner peace."},
+          {"src":"images/Calm sold 80x100 (3).jpg","caption":"Calm No.3 — 80x100cm","description":"Balanced composition with neutral shades."},
+          {"src":"images/Calm sold 80x100 (4).jpg","caption":"Calm No.4 — 80x100cm","description":"Minimalist textures evoking calmness."}
+        ]'>
+        <img src="images/Calm sold 80x100 (1).jpg" alt="Calm Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Calm sold 80x100 (2).jpg" alt="Calm Series alternative artwork, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Calm Series — 80x100cm</span>
       </a>
 
-      <!-- Artwork 6 -->
-      <a href="#" class="hover-swap" aria-label="Nature’s Flow 90x90cm"
-        data-images='[{"src":"images/Nature flow 90x90 (1).jpg","caption":"Nature’s Flow No.1 — 90x90cm"},{"src":"images/Nature flow 90x90 (2).jpg","caption":"Nature’s Flow No.2 — 90x90cm"}]'>
-        <img src="images/Nature flow 90x90 (1).jpg" alt="Nature’s Flow painting, 90x90cm" class="default" loading="lazy" />
-        <img src="images/Nature flow 90x90 (2).jpg" alt="Nature’s Flow alternative view, 90x90cm" class="hover" loading="lazy" />
-        <span class="hover-title">Nature’s Flow — 90x90cm</span>
+      <!-- Colorful Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Colorful Series artworks 80x100cm"
+        data-images='[
+          {"src":"images/Colorful 80x100 (1).jpg","caption":"Colorful No.1 — 80x100cm","description":"Vivid palettes and lively textures."},
+          {"src":"images/Colorful 80x100 (2).jpg","caption":"Colorful No.2 — 80x100cm","description":"Playful layers and organic patterns."},
+          {"src":"images/Colorful 80x100 (3).jpg","caption":"Colorful No.3 — 80x100cm","description":"Bold contrast with delicate details."},
+          {"src":"images/Colorful 80x100 (4).jpg","caption":"Colorful No.4 — 80x100cm","description":"An uplifting composition of tones."}
+        ]'>
+        <img src="images/Colorful 80x100 (1).jpg" alt="Colorful Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Colorful 80x100 (2).jpg" alt="Colorful Series alternative artwork, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Colorful Series — 80x100cm</span>
       </a>
 
-      <!-- Artwork 7 -->
-      <a href="#" class="hover-swap" aria-label="Ocean Calm 100x150cm"
-        data-images='[{"src":"images/Ocean calm 100x150 (1).jpg","caption":"Ocean Calm No.1 — 100x150cm"},{"src":"images/Ocean calm 100x150 (2).jpg","caption":"Ocean Calm No.2 — 100x150cm"}]'>
-        <img src="images/Ocean calm 100x150 (1).jpg" alt="Ocean Calm painting, 100x150cm" class="default" loading="lazy" />
-        <img src="images/Ocean calm 100x150 (2).jpg" alt="Ocean Calm alternative view, 100x150cm" class="hover" loading="lazy" />
-        <span class="hover-title">Ocean Calm — 100x150cm</span>
+      <!-- Earth Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Earth Series artworks 60x60cm"
+        data-images='[
+          {"src":"images/Earth 60x60 (1).jpg","caption":"Earth No.1 — 60x60cm","description":"Natural textures inspired by landscapes."},
+          {"src":"images/Earth 60x60 (2).jpg","caption":"Earth No.2 — 60x60cm","description":"Layered minerals and earthy tones."},
+          {"src":"images/Earth 60x60 (3).jpg","caption":"Earth No.3 — 60x60cm","description":"Organic flows and metallic highlights."},
+          {"src":"images/Earth 60x60 (4).jpg","caption":"Earth No.4 — 60x60cm","description":"A tactile composition with depth."},
+          {"src":"images/Earth 60x60 (5).jpg","caption":"Earth No.5 — 60x60cm","description":"Exploration of geology and texture."}
+        ]'>
+        <img src="images/Earth 60x60 (1).jpg" alt="Earth Series artwork, 60x60cm" class="default" loading="lazy" />
+        <img src="images/Earth 60x60 (2).jpg" alt="Earth Series alternative artwork, 60x60cm" class="hover" loading="lazy" />
+        <span class="hover-title">Earth Series — 60x60cm</span>
       </a>
 
-      <!-- Artwork 8 -->
-      <a href="#" class="hover-swap" aria-label="Sunset Glow 100x80cm"
-        data-images='[{"src":"images/Sunset glow 100x80 (1).jpg","caption":"Sunset Glow No.1 — 100x80cm"},{"src":"images/Sunset glow 100x80 (2).jpg","caption":"Sunset Glow No.2 — 100x80cm"}]'>
-        <img src="images/Sunset glow 100x80 (1).jpg" alt="Sunset Glow artwork, 100x80cm" class="default" loading="lazy" />
-        <img src="images/Sunset glow 100x80 (2).jpg" alt="Sunset Glow alternative view, 100x80cm" class="hover" loading="lazy" />
-        <span class="hover-title">Sunset Glow — 100x80cm</span>
+      <!-- Glacier Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Glacier Series artworks 100x100cm"
+        data-images='[
+          {"src":"images/Glacier 100x100 (1).jpg","caption":"Glacier No.1 — 100x100cm","description":"Cool textures and crystalline structures."},
+          {"src":"images/Glacier 100x100 (2).jpg","caption":"Glacier No.2 — 100x100cm","description":"Icy blues with layered depth."},
+          {"src":"images/Glacier 100x100 (3).jpg","caption":"Glacier No.3 — 100x100cm","description":"Subtle contrasts and light refraction."},
+          {"src":"images/Glacier 100x100 (4).jpg","caption":"Glacier No.4 — 100x100cm","description":"Elegant textures with high contrast."}
+        ]'>
+        <img src="images/Glacier 100x100 (1).jpg" alt="Glacier Series artwork, 100x100cm" class="default" loading="lazy" />
+        <img src="images/Glacier 100x100 (2).jpg" alt="Glacier Series alternative artwork, 100x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Glacier Series — 100x100cm</span>
       </a>
 
-      <!-- Artwork 9 -->
-      <a href="#" class="hover-swap" aria-label="Mystic Energy 120x120cm"
-        data-images='[{"src":"images/Mystic energy 120x120 (1).jpg","caption":"Mystic Energy No.1 — 120x120cm"},{"src":"images/Mystic energy 120x120 (2).jpg","caption":"Mystic Energy No.2 — 120x120cm"}]'>
-        <img src="images/Mystic energy 120x120 (1).jpg" alt="Mystic Energy painting, 120x120cm" class="default" loading="lazy" />
-        <img src="images/Mystic energy 120x120 (2).jpg" alt="Mystic Energy alternative view, 120x120cm" class="hover" loading="lazy" />
-        <span class="hover-title">Mystic Energy — 120x120cm</span>
+      <!-- Green Series (includes sold variants) -->
+      <a href="#" class="hover-swap"
+        aria-label="Green Series artworks 80x100cm"
+        data-images='[
+          {"src":"images/Green Sold 80x100 (1).jpg","caption":"Green No.1 — 80x100cm (Sold)","description":"Lush greens and layered texture — sold."},
+          {"src":"images/Green Sold 80x100 (2).jpg","caption":"Green No.2 — 80x100cm (Sold)","description":"Deep tonal variations with organic flow."},
+          {"src":"images/Green Sold 80x100 (3).jpg","caption":"Green No.3 — 80x100cm (Sold)","description":"A vibrant study in verdant hues."}
+        ]'>
+        <img src="images/Green Sold 80x100 (1).jpg" alt="Green Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Green Sold 80x100 (2).jpg" alt="Green Series alternative artwork, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Green Series — 80x100cm (Sold examples)</span>
       </a>
 
-      <!-- Artwork 10 -->
-      <a href="#" class="hover-swap" aria-label="Winter Silence 90x110cm"
-        data-images='[{"src":"images/Winter silence 90x110 (1).jpg","caption":"Winter Silence No.1 — 90x110cm"},{"src":"images/Winter silence 90x110 (2).jpg","caption":"Winter Silence No.2 — 90x110cm"}]'>
-        <img src="images/Winter silence 90x110 (1).jpg" alt="Winter Silence painting, 90x110cm" class="default" loading="lazy" />
-        <img src="images/Winter silence 90x110 (2).jpg" alt="Winter Silence alternative view, 90x110cm" class="hover" loading="lazy" />
-        <span class="hover-title">Winter Silence — 90x110cm</span>
+      <!-- Gren and blue Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Gren and blue Series artworks 80x100cm"
+        data-images='[
+          {"src":"images/Gren and blue 80x100 (1).jpg","caption":"Gren & Blue No.1 — 80x100cm","description":"A harmonic blend of green and blue tones."},
+          {"src":"images/Gren and blue 80x100 (2).jpg","caption":"Gren & Blue No.2 — 80x100cm","description":"Textured layers creating depth and contrast."},
+          {"src":"images/Gren and blue 80x100 (3).jpg","caption":"Gren & Blue No.3 — 80x100cm","description":"Abstract veins of color with gold accents."}
+        ]'>
+        <img src="images/Gren and blue 80x100 (1).jpg" alt="Gren and blue Series artwork, 80x100cm" class="default" loading="lazy" />
+        <img src="images/Gren and blue 80x100 (2).jpg" alt="Gren and blue Series alternative artwork, 80x100cm" class="hover" loading="lazy" />
+        <span class="hover-title">Gren & Blue — 80x100cm</span>
       </a>
 
+      <!-- Katie Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Katie Series artworks 80x160cm"
+        data-images='[
+          {"src":"images/Katie 80x160 (1).jpg","caption":"Katie No.1 — 80x160cm","description":"Soft horizon lines and calming tones."},
+          {"src":"images/Katie 80x160 (2).jpg","caption":"Katie No.2 — 80x160cm","description":"Balanced compositions for interiors."},
+          {"src":"images/Katie 80x160 (3).jpg","caption":"Katie No.3 — 80x160cm","description":"Elegant use of light and negative space."}
+        ]'>
+        <img src="images/Katie 80x160 (1).jpg" alt="Katie Series artwork, 80x160cm" class="default" loading="lazy" />
+        <img src="images/Katie 80x160 (2).jpg" alt="Katie Series alternative artwork, 80x160cm" class="hover" loading="lazy" />
+        <span class="hover-title">Katie Series — 80x160cm</span>
+      </a>
 
-      <!-- Add more artworks in same structure -->
+      <!-- Long Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Long Series artworks 60x120cm"
+        data-images='[
+          {"src":"images/Long 60x120 (1).jpg","caption":"Long No.1 — 60x120cm","description":"Vertical compositions suited to narrow walls."},
+          {"src":"images/Long 60x120 (2).jpg","caption":"Long No.2 — 60x120cm","description":"Textural rhythm and elongated movement."},
+          {"src":"images/Long 60x120 (3).jpg","caption":"Long No.3 — 60x120cm","description":"Strong vertical focus with layered pigments."}
+        ]'>
+        <img src="images/Long 60x120 (1).jpg" alt="Long Series artwork, 60x120cm" class="default" loading="lazy" />
+        <img src="images/Long 60x120 (2).jpg" alt="Long Series alternative artwork, 60x120cm" class="hover" loading="lazy" />
+        <span class="hover-title">Long Series — 60x120cm</span>
+      </a>
+
+      <!-- Pink Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Pink Series artworks 60x80cm"
+        data-images='[
+          {"src":"images/Pink 60x80 (1).jpg","caption":"Pink No.1 — 60x80cm","description":"Warm pinks blended with subtle textures."},
+          {"src":"images/Pink 60x80 (2).jpg","caption":"Pink No.2 — 60x80cm","description":"Romantic palettes balanced by neutral shades."},
+          {"src":"images/Pink 60x80 (3).jpg","caption":"Pink No.3 — 60x80cm","description":"Delicate layering and soft edges."}
+        ]'>
+        <img src="images/Pink 60x80 (1).jpg" alt="Pink Series artwork, 60x80cm" class="default" loading="lazy" />
+        <img src="images/Pink 60x80 (2).jpg" alt="Pink Series alternative artwork, 60x80cm" class="hover" loading="lazy" />
+        <span class="hover-title">Pink Series — 60x80cm</span>
+      </a>
+
+      <!-- PinkBlue Series -->
+      <a href="#" class="hover-swap"
+        aria-label="PinkBlue Series artworks 60x80cm"
+        data-images='[
+          {"src":"images/PinkBlue 60x80 (1).jpg","caption":"PinkBlue No.1 — 60x80cm","description":"Soft pinks mixing with cool blue accents."},
+          {"src":"images/PinkBlue 60x80 (2).jpg","caption":"PinkBlue No.2 — 60x80cm","description":"Dreamy gradients and airy texture."},
+          {"src":"images/PinkBlue 60x80 (3).jpg","caption":"PinkBlue No.3 — 60x80cm","description":"A gentle interplay of warm and cool tones."}
+        ]'>
+        <img src="images/PinkBlue 60x80 (1).jpg" alt="PinkBlue Series artwork, 60x80cm" class="default" loading="lazy" />
+        <img src="images/PinkBlue 60x80 (2).jpg" alt="PinkBlue Series alternative artwork, 60x80cm" class="hover" loading="lazy" />
+        <span class="hover-title">PinkBlue Series — 60x80cm</span>
+      </a>
+
+      <!-- Sold (100x140) Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Sold Series artworks 100x140cm"
+        data-images='[
+          {"src":"images/Sold 100x140 (1).jpg","caption":"Sold No.1 — 100x140cm","description":"A recent sale — highlighted for reference."},
+          {"src":"images/Sold 100x140 (2).jpg","caption":"Sold No.2 — 100x140cm","description":"Large scale work with layered textures."},
+          {"src":"images/Sold 100x140 (3).jpg","caption":"Sold No.3 — 100x140cm","description":"Statement piece with rich colour depth."}
+        ]'>
+        <img src="images/Sold 100x140 (1).jpg" alt="Sold Series artwork, 100x140cm" class="default" loading="lazy" />
+        <img src="images/Sold 100x140 (2).jpg" alt="Sold Series alternative artwork, 100x140cm" class="hover" loading="lazy" />
+        <span class="hover-title">Sold — 100x140cm (Examples)</span>
+      </a>
+
+      <!-- Wave Series -->
+      <a href="#" class="hover-swap"
+        aria-label="Wave Series artworks 90x120cm"
+        data-images='[
+          {"src":"images/Wave 90x120 (1).jpg","caption":"Wave No.1 — 90x120cm","description":"Fluid motion captured in layered blues."},
+          {"src":"images/Wave 90x120 (2).jpg","caption":"Wave No.2 — 90x120cm","description":"Sea-inspired textures with soft edges."},
+          {"src":"images/Wave 90x120 (3).jpg","caption":"Wave No.3 — 90x120cm","description":"Strong movement with delicate highlights."}
+        ]'>
+        <img src="images/Wave 90x120 (1).jpg" alt="Wave Series artwork, 90x120cm" class="default" loading="lazy" />
+        <img src="images/Wave 90x120 (2).jpg" alt="Wave Series alternative artwork, 90x120cm" class="hover" loading="lazy" />
+        <span class="hover-title">Wave Series — 90x120cm</span>
+      </a>
+
+      <!-- Generic 80x80 Series (examples from folder) -->
+      <a href="#" class="hover-swap"
+        aria-label="Square works 80x80cm"
+        data-images='[
+          {"src":"images/80x80 (1).jpg","caption":"Square No.1 — 80x80cm","description":"Compact square study with rich texture."},
+          {"src":"images/80x80 (2).jpg","caption":"Square No.2 — 80x80cm","description":"An intimate composition for smaller spaces."},
+          {"src":"images/80x80 (3).jpg","caption":"Square No.3 — 80x80cm","description":"Bold surface work in a compact format."}
+        ]'>
+        <img src="images/80x80 (1).jpg" alt="80x80 series artwork" class="default" loading="lazy" />
+        <img src="images/80x80 (2).jpg" alt="80x80 series artwork hover" class="hover" loading="lazy" />
+        <span class="hover-title">Square — 80x80cm</span>
+      </a>
+
     </section>
 
     <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox" aria-hidden="true">
-      <div class="lightbox-content">
+      <div class="lightbox-wrapper">
         <button id="close-lightbox" aria-label="Close">×</button>
-        <button id="prev" aria-label="Previous image">‹</button>
-        <div class="lightbox-main">
-          <img src="" alt="Expanded artwork view" id="lightbox-img">
+        <div class="lightbox-content">
+          <!-- Main image -->
+          <div class="lightbox-main">
+            <img src="" alt="Expanded artwork view" id="lightbox-img" />
+          </div>
+          <!-- Details -->
+          <div class="lightbox-details">
+            <h3 id="lightbox-title">Artwork Title</h3>
+            <p id="lightbox-description">Artwork description goes here.</p>
+            <a href="contact.html" class="cta-btn enquire-btn">Purchase</a>
+          </div>
         </div>
-        <button id="next" aria-label="Next image">›</button>
-        <p id="lightbox-caption" class="art-caption"></p>
+        <!-- Thumbnails -->
         <div id="lightbox-thumbs" class="lightbox-thumbs"></div>
-        <a href="contact.html" class="cta-btn enquire-btn">Purchase / Enquire</a>
+        <!-- Navigation -->
+        <button id="prev" aria-label="Previous image">‹</button>
+        <button id="next" aria-label="Next image">›</button>
       </div>
     </div>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Giedre Yager. All rights reserved.</p>
-    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Instagram">
-      <img src="images/instagram-color.png" alt="Instagram logo" class="instagram-logo" />
-    </a>
-    <a href="mailto:yourname@example.com" class="email-link" aria-label="Send email">Email Me</a>
+    <p>&copy; 2025 Giedre Yager — All rights reserved</p>
+    <div class="footer-links">
+      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Instagram">
+        <img src="images/instagram-color.png" alt="Instagram logo" class="instagram-logo" />
+      </a>
+      <a href="mailto:yourname@example.com" class="email-link" aria-label="Send email">Email Me</a>
+    </div>
   </footer>
-  
+
+  <!-- SCRIPTS -->
   <script>
+    // Header hide on scroll
     let lastScroll = 0;
     const header = document.getElementById("site-header");
-
     window.addEventListener("scroll", () => {
       const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScroll && currentScroll > 100) header.classList.add("hide");
+      else header.classList.remove("hide");
+      lastScroll = currentScroll;
+    });
 
-      if (currentScroll > lastScroll && currentScroll > 100) {
-        // scrolling down & not at very top
-        header.classList.add("hide");
-      } else {
-        // scrolling up
-        header.classList.remove("hide");
+    document.addEventListener("DOMContentLoaded", () => {
+      const hoverSwaps = document.querySelectorAll(".hover-swap");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxTitle = document.getElementById("lightbox-title");
+      const lightboxDescription = document.getElementById("lightbox-description");
+      const lightboxThumbs = document.getElementById("lightbox-thumbs");
+      const closeBtn = document.getElementById("close-lightbox");
+      const prevBtn = document.getElementById("prev");
+      const nextBtn = document.getElementById("next");
+      let currentSeries = [];
+      let currentIndex = 0;
+
+      hoverSwaps.forEach(item => {
+        item.addEventListener("click", e => {
+          e.preventDefault();
+          currentSeries = JSON.parse(item.dataset.images);
+          currentIndex = 0;
+          openLightbox();
+        });
+      });
+
+      function openLightbox() {
+        updateLightbox();
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+        renderThumbnails();
       }
 
-      lastScroll = currentScroll;
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      function updateLightbox() {
+        const current = currentSeries[currentIndex];
+        lightboxImg.src = current.src;
+        lightboxImg.alt = current.caption;
+        lightboxTitle.textContent = current.caption;
+        lightboxDescription.textContent = current.description || "No description available.";
+        updateActiveThumb();
+      }
+
+      function renderThumbnails() {
+        lightboxThumbs.innerHTML = "";
+        currentSeries.forEach((imgObj, index) => {
+          const thumb = document.createElement("img");
+          thumb.src = imgObj.src;
+          thumb.alt = imgObj.caption;
+          thumb.addEventListener("click", () => { currentIndex = index; updateLightbox(); });
+          lightboxThumbs.appendChild(thumb);
+        });
+        updateActiveThumb();
+      }
+
+      function updateActiveThumb() {
+        const thumbs = lightboxThumbs.querySelectorAll("img");
+        thumbs.forEach((thumb, i) => thumb.classList.toggle("active-thumb", i === currentIndex));
+      }
+
+      function prevImage() { currentIndex = (currentIndex - 1 + currentSeries.length) % currentSeries.length; updateLightbox(); }
+      function nextImage() { currentIndex = (currentIndex + 1) % currentSeries.length; updateLightbox(); }
+
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", prevImage);
+      nextBtn.addEventListener("click", nextImage);
+
+      lightbox.addEventListener("click", e => { if(e.target === lightbox) closeLightbox(); });
+
+      document.addEventListener("keydown", e => {
+        if(!lightbox.classList.contains("active")) return;
+        if(e.key==="ArrowLeft") prevImage();
+        if(e.key==="ArrowRight") nextImage();
+        if(e.key==="Escape") closeLightbox();
+      });
+
+      // Masonry grid row spans
+      const items = document.querySelectorAll(".hover-swap");
+      items.forEach(item => {
+        const img = item.querySelector("img.default");
+        img.onload = () => {
+          const rowHeight = 10;
+          const gap = 28;
+          const span = Math.ceil((img.height + gap) / rowHeight);
+          item.style.setProperty('--span', span);
+        };
+      });
     });
   </script>
 
-
 </body>
 </html>
-
