@@ -11,6 +11,26 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Contact page specific styling for better UX -->
+  <style>
+    .contact-intro {max-width:800px; margin:4rem auto 2rem; text-align:center; padding:0 1rem;}
+    .contact-container {max-width:600px; margin:2rem auto; padding:1rem;}
+    .contact-form {display:flex; flex-direction:column; gap:1.25rem;}
+    .form-group {display:flex; flex-direction:column; gap:0.4rem;}
+    .form-group input, .form-group textarea {padding:0.75rem 1rem; border:1px solid #ccc; border-radius:8px; font-size:1rem; width:100%; transition:0.2s;}
+    .form-group input:focus, .form-group textarea:focus {outline:none; border-color:#000;}
+    .cta-btn {align-self:flex-start; padding:0.8rem 2rem; border:none; border-radius:30px; background:#000; color:#fff; font-weight:500; cursor:pointer; transition:0.3s;}
+    .cta-btn:hover {background:#333;}
+    .direct-email {margin-top:1rem; font-size:0.95rem; text-align:center;}
+    #form-status {margin-top:1rem; font-size:0.95rem; text-align:center;}
+  </style>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){ emailjs.init("YOUR_PUBLIC_KEY"); })(); /* Replace with your EmailJS public key */
+  </script>
 </head>
 <body>
 
@@ -29,43 +49,41 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-banner" style="background:linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0)), url('images/contact-banner.jpg') no-repeat center center/cover;">
-    <div class="hero-overlay">
-      <h2>Contact Me</h2>
-      <p>Interested in purchasing an artwork or collaborating? Let’s connect and make it yours.</p>
-      <a href="#contact-form" class="cta-btn">Send a Message</a>
-    </div>
-  </section>
-
-  <!-- CONTACT FORM -->
+  <!-- CONTACT SECTION -->
   <main>
-    <section class="intro">
+    <section class="intro contact-intro">
       <h2>Let’s Talk</h2>
-      <p>Please use the form below to reach out regarding artwork purchases, commissions, or collaborations.</p>
+      <p>Reach out regarding artwork purchases, commissions, or collaborations. I’ll get back to you as soon as possible.</p>
     </section>
 
-    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required placeholder="Your full name" />
+    <!-- CONTACT FORM -->
+    <section class="contact-container">
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name" />
+        </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required placeholder="your@email.com" />
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com" />
+        </div>
 
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" required placeholder="Artwork enquiry" />
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required placeholder="Artwork enquiry" />
+        </div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+        </div>
 
-      <button type="submit" class="cta-btn">Send Message</button>
-    </form>
-
-    <div class="thank-you-message" style="display:none;">
-      <p>Thank you for reaching out! I’ll get back to you shortly.</p>
-    </div>
-
-    <p class="direct-email">Prefer email? Reach me at <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+        <button type="submit" class="cta-btn">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+      <p class="direct-email">Prefer email? Reach me at <a href="mailto:giedreyager@gmail.com">giedreyager@gmail.com</a></p>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -75,9 +93,38 @@
       <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Instagram">
         <img src="images/instagram-color.png" alt="Instagram logo" class="instagram-logo" />
       </a>
-      <a href="mailto:yourname@example.com" class="email-link" aria-label="Send email">Email Me</a>
+      <a href="mailto:giedreyager@gmail.com" class="email-link" aria-label="Send email">Email Me</a>
     </div>
   </footer>
 
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+  <script>
+    // ==========================
+    // EMAILJS CONTACT FORM HANDLER
+    // ==========================
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        status.textContent = "Sending…";
+        status.style.color = "#000";
+
+        emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', form) // Replace with your IDs
+          .then(() => {
+            status.textContent = "Message sent successfully!";
+            status.style.color = "green";
+            form.reset();
+          }, (err) => {
+            status.textContent = "Oops! Something went wrong. Please try again.";
+            status.style.color = "red";
+            console.error("EmailJS error:", err);
+          });
+      });
+    });
+  </script>
 </body>
 </html>
