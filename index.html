@@ -14,26 +14,55 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header id="site-header">
-    <a href="#hero" class="logo-link" aria-label="Go to homepage">
-      <img src="images/logo.png" alt="Giedre Yager Logo" />
-      <h1>Giedre Yager</h1>
+<!-- HEADER -->
+<header id="site-header">
+  <a href="#hero" class="logo-link" aria-label="Go to homepage">
+    <img src="images/logo.png" alt="Giedre Yager Logo" />
+    <h1>Giedre Yager</h1>
+  </a>
+
+  <!-- Instagram + Email stacked -->
+  <div class="header-social">
+    <a href="https://instagram.com/naturallygiedre" 
+       target="_blank" 
+       rel="noopener" 
+       class="header-instagram"
+       aria-label="Visit Instagram profile">
+      <img src="images/instagram-color.svg" alt="Instagram logo" class="instagram-logo" />
     </a>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" />
-    <label for="menu-toggle" class="hamburger" role="button" tabindex="0" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </label>
-    
-  </header>
+    <a href="mailto:giedreyager@gmail.com" 
+       class="header-email" 
+       aria-label="Send an email to Giedre Yager">
+      giedreyager@gmail.com
+    </a>
+  </div>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" />
+  <label for="menu-toggle" class="hamburger" role="button" tabindex="0" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </label>
+</header>
+
+
 
   <!-- HERO SECTION -->
   <section id="hero" class="hero-banner" style="background:linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0)), url('images/banner.jpg') no-repeat center center/cover;">
     <div class="hero-overlay">
       <h2>Welcome to Giedre&nbsp;Yager’s&nbsp;Gallery</h2>
       <p>Explore a journey of colors, textures, and emotions.</p>
+      
+      <!-- ★ Email below hero subtitle -->
+      <a href="mailto:giedreyager@gmail.com" 
+        class="hero-email" 
+        aria-label="Send an email to Giedre Yager">
+        Contact me: giedreyager@gmail.com
+      </a>
+
       <div class="hero-ctas">
+        <!-- any CTA buttons -->
+      </div>
     </div>
+
   </section>
 
   <!-- INTRO -->
@@ -312,16 +341,6 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Giedre Yager — All rights reserved</p>
-    <div class="footer-links">
-      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Instagram profile">
-        <img src="images/instagram-color.png" alt="Instagram logo" class="instagram-logo" />
-      </a>
-      <a href="mailto:giedreyager@gmail.com" class="email-link" aria-label="Send email">giedreyager@gmail.com</a>
-    </div>
-  </footer>
 
   <!-- SCRIPT -->
   <script src="script.js"></script>
