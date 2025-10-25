@@ -1,5 +1,5 @@
 // ==========================
-// MOBILE NAVIGATION
+// MOBILE NAVIGATION ENHANCEMENT
 // ==========================
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelectorAll("nav a");
@@ -9,8 +9,14 @@ if (menuToggle && navLinks) {
   });
 }
 
+// Add slight scroll lock on mobile when nav is open
+menuToggle.addEventListener("change", () => {
+  if (menuToggle.checked) document.body.style.overflow = "hidden";
+  else document.body.style.overflow = "";
+});
+
 // ==========================
-// HIDE HEADER ON SCROLL
+// HIDE HEADER ON SCROLL (mobile-safe)
 // ==========================
 const header = document.querySelector("header");
 let lastScrollY = window.scrollY;
@@ -23,7 +29,7 @@ if (header) {
 }
 
 // ==========================
-// LIGHTBOX SETUP
+// LIGHTBOX
 // ==========================
 const galleryContainer = document.querySelector(".preview-grid");
 const lightbox = document.getElementById("lightbox");
@@ -36,20 +42,15 @@ const lightboxThumbs = document.getElementById("lightbox-thumbs");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const closeBtn = document.getElementById("close-lightbox");
+
 let currentSeries = [], currentIndex = 0;
 
-// ==========================
-// OPEN LIGHTBOX SERIES
-// ==========================
 function openLightboxSeries(seriesData, startIndex = 0) {
   currentSeries = seriesData;
   currentIndex = startIndex;
   updateLightbox();
 
-  // Clear previous thumbnails
   lightboxThumbs.innerHTML = "";
-
-  // Generate thumbnails
   currentSeries.forEach((item, idx) => {
     const thumb = document.createElement("img");
     thumb.src = item.src;
@@ -63,7 +64,48 @@ function openLightboxSeries(seriesData, startIndex = 0) {
 
   lightbox.classList.add("active");
   document.body.style.overflow = "hidden";
+  lightbox.setAttribute("aria-hidden", "false");
 }
+
+function updateLightbox() {
+  const imgData = currentSeries[currentIndex];
+  lightboxImg.src = imgData.src;
+  lightboxTitle.textContent = imgData.caption;
+  lightboxDescription.textContent = imgData.description;
+  lightboxSize.textContent = `Size: ${imgData.size || "—"}`;
+  lightboxPrice.textContent = `Price: ${imgData.price || "—"}`;
+
+  lightboxThumbs.querySelectorAll("img").forEach((thumb, idx) => {
+    thumb.classList.toggle("active-thumb", idx === currentIndex);
+  });
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+  lightbox.setAttribute("aria-hidden", "true");
+}
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % currentSeries.length;
+  updateLightbox();
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + currentSeries.length) % currentSeries.length;
+  updateLightbox();
+}
+
+galleryContainer.addEventListener("click", (e) => {
+  const item = e.target.closest(".hover-swap");
+  if (!item) return;
+  e.preventDefault();
+  const seriesData = JSON.parse(item.dataset.images);
+  openLightboxSeries(seriesData);
+});
+
+nextBtn.addEventListener("click", showNext);
+prevBtn.addEventListener("click", showPrev);
 
 // ==========================
 // UPDATE LIGHTBOX
