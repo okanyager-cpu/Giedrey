@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Giedre Yager's art portfolio — explore abstract paintings inspired by nature, spirituality, and emotions." />
-  <title>Home | Giedre Yager</title>
+  <title>Giedre Yager | Abstract Art Portfolio</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,34 +16,23 @@
 
   <!-- HEADER -->
   <header id="site-header">
-    <a href="index.html" class="logo-link" aria-label="Go to homepage">
+    <a href="#hero" class="logo-link" aria-label="Go to homepage">
       <img src="images/logo.png" alt="Giedre Yager Logo" />
       <h1>Giedre Yager</h1>
     </a>
     <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" />
-    <label for="menu-toggle" class="hamburger" role="button" tabindex="0" aria-label="Toggle menu"></label>
-    <nav class="center-nav" role="navigation" aria-label="Main navigation">
-      <a href="index.html" class="active-link">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-   <!-- Mobile Hamburger Menu -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" /> 
     <label for="menu-toggle" class="hamburger" role="button" tabindex="0" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </label>
+    
+  </header>
 
   <!-- HERO SECTION -->
-  <section class="hero-banner" style="background:linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0)), url('images/banner.jpg') no-repeat center center/cover;">
+  <section id="hero" class="hero-banner" style="background:linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0)), url('images/banner.jpg') no-repeat center center/cover;">
     <div class="hero-overlay">
       <h2>Welcome to Giedre&nbsp;Yager’s&nbsp;Gallery</h2>
       <p>Explore a journey of colors, textures, and emotions.</p>
       <div class="hero-ctas">
-        <a href="gallery.html" class="cta-btn">Explore Gallery</a>
-        <a href="contact.html" class="cta-btn secondary">Contact Me</a>
-      </div>
     </div>
   </section>
 
@@ -54,9 +43,8 @@
       <p>Each piece reflects a unique perspective inspired by nature, spirituality, and everyday life. Browse the series below and click to explore more details.</p>
     </section>
 
-    <!-- PREVIEW GRID -->
-    <section class="preview-grid" aria-label="Full gallery preview">
-
+    <!-- GALLERY -->
+    <section id="gallery" class="preview-grid" aria-label="Art gallery preview">
       <!-- Beige Series -->
       <div class="hover-swap" 
           role="button" tabindex="0"
@@ -304,7 +292,6 @@
       </div>
     </section>
 
-
     <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox" aria-hidden="true">
       <div class="lightbox-wrapper">
@@ -317,28 +304,22 @@
           <div class="lightbox-main-area">
             <img src="" alt="Expanded artwork view" id="lightbox-img" class="lightbox-main" />
           </div>
-          <div class="lightbox-meta">
-            <p id="lightbox-size">Size: —</p>
-            <p id="lightbox-price">Price: —</p>
-          </div>
-
         </div>
         <div id="lightbox-thumbs" class="lightbox-thumbs"></div>
         <button id="prev" aria-label="Previous image">‹</button>
         <button id="next" aria-label="Next image">›</button>
       </div>
     </div>
-
   </main>
 
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Giedre Yager — All rights reserved</p>
     <div class="footer-links">
-      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Giedre Yager’s Instagram profile">
-       <img src="images/instagram-color.png" alt="Instagram logo linking to Giedre Yager’s profile" class="instagram-logo" />
+      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Visit Instagram profile">
+        <img src="images/instagram-color.png" alt="Instagram logo" class="instagram-logo" />
       </a>
-      <a href="mailto:yourname@example.com" class="email-link" aria-label="Send email">Email Me at giedreyager@gmail.com</a>
+      <a href="mailto:giedreyager@gmail.com" class="email-link" aria-label="Send email">giedreyager@gmail.com</a>
     </div>
   </footer>
 
@@ -346,3 +327,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+      
