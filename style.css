@@ -15,6 +15,56 @@ header nav {display:flex; gap:1.5rem;}
 header nav a {font-weight:500; position:relative;}
 header nav a.active-link::after {content:""; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:#000;}
 
+/* ★ NEW - Instagram + Email stacked in header */
+.header-social {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 0.25rem;           /* spacing between Instagram and email */
+  margin-left: auto;      /* push to right side */
+}
+
+.header-social .header-instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.header-social .header-instagram:hover {
+  opacity: 0.8;
+}
+
+.header-social .instagram-logo {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.header-social .header-email {
+  font-size: 0.9rem;
+  color: #9b5de5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-social .header-email:hover {
+  text-decoration: underline;
+}
+
+/* ★ NEW - On mobile, position neatly beside hamburger */
+@media (max-width:768px) {
+  .header-social {
+    order: 3; /* after hamburger */
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+  .header-social .instagram-logo {
+    width: 26px;
+    height: 26px;
+  }
+}
+
 /* HAMBURGER MENU */
 .menu-toggle {display:none;}
 .hamburger {display:none; flex-direction:column; justify-content:space-between; width:26px; height:18px; cursor:pointer;}
@@ -27,7 +77,23 @@ header nav a.active-link::after {content:""; position:absolute; bottom:-5px; lef
 .hero-banner p {font-size:1.1rem; margin-bottom:1rem;}
 .cta-btn {background:#000; color:#fff; padding:0.7rem 1.5rem; border-radius:30px; font-weight:500; transition:background 0.3s;}
 .cta-btn:hover {background:#333;}
-.cta-btn.secondary {background:#fff; color:#9b5de5;}
+.cta-btn.secondary {background:#fff; color:#fff;}
+/* ★ Hero email */
+.hero-email {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.hero-email:hover {
+  color: #6a32b8;
+  text-decoration: underline;
+}
+
 
 /* INTRO */
 .intro {max-width:900px; margin:3rem auto; text-align:center; padding:0 1rem;}
